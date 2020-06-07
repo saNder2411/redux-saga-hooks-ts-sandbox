@@ -22,13 +22,13 @@ type StarshipsStopFetchingAction = {
 };
 
 export const STARSHIPS_SACCESS = 'STARSHIPS_SACCESS';
-type StarshipsSaccessAction = {
+export type StarshipsSaccessAction = {
   type: typeof STARSHIPS_SACCESS;
   payload: Starships;
 };
 
 export const STARSHIPS_FAILURE = 'STARSHIPS_FAILURE';
-type StarshipsFailureAction = {
+export type StarshipsFailureAction = {
   type: typeof STARSHIPS_FAILURE;
   error: true;
   payload: ErrorHttpAction;
