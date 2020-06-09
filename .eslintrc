@@ -26,7 +26,8 @@
       "tsx": "never"
     }],
     "max-len": ["error", { "code": 180 }],
-    "react/jsx-props-no-spreading": 0
+    "react/jsx-props-no-spreading": 0,
+    "no-case-declarations": 0
   },
   "settings": {
     "import/parsers": {
