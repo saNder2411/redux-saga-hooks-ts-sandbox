@@ -11,38 +11,38 @@ export type ErrorHttpAction = {
 };
 
 // Sync
-export const STARSHIPS_START_FETCHING = 'STARSHIPS_START_FETCHING';
-type StarshipsStartFetchingAction = {
-  type: typeof STARSHIPS_START_FETCHING;
+export const FETCH_STARSHIPS_START_REQUEST = 'FETCH_STARSHIPS_START_REQUEST';
+type StarshipsFetchActionStartOfRequest = {
+  type: typeof FETCH_STARSHIPS_START_REQUEST;
 };
 
-export const STARSHIPS_STOP_FETCHING = 'STARSHIPS_STOP_FETCHING';
-type StarshipsStopFetchingAction = {
-  type: typeof STARSHIPS_STOP_FETCHING;
+export const FETCH_STARSHIPS_FINISH_REQUEST = 'FETCH_STARSHIPS_FINISH_REQUEST';
+type StarshipsFetchActionFinishOfRequest = {
+  type: typeof FETCH_STARSHIPS_FINISH_REQUEST;
 };
 
-export const STARSHIPS_SACCESS = 'STARSHIPS_SACCESS';
-export type StarshipsSaccessAction = {
-  type: typeof STARSHIPS_SACCESS;
+export const FETCH_STARSHIPS_SUCCESS = 'FETCH_STARSHIPS_SUCCESS';
+export type StarshipsFetchActionSuccess = {
+  type: typeof FETCH_STARSHIPS_SUCCESS;
   payload: Starships;
 };
 
-export const STARSHIPS_FAILURE = 'STARSHIPS_FAILURE';
-export type StarshipsFailureAction = {
-  type: typeof STARSHIPS_FAILURE;
+export const FETCH_STARSHIPS_FAILURE = 'FETCH_STARSHIPS_FAILURE';
+export type StarshipsFetchActionFailure = {
+  type: typeof FETCH_STARSHIPS_FAILURE;
   error: true;
   payload: ErrorHttpAction;
 };
 
 // Async
-export const STARSHIPS_FETCH_ASYNC = 'STARSHIPS_FETCH_ASYNC';
-type StarshipsFetchAsyncAction = {
-  type: typeof STARSHIPS_FETCH_ASYNC;
+export const FETCH_STARSHIPS_ASYNC = 'FETCH_STARSHIPS_ASYNC';
+type StarshipsFetchActionAsync = {
+  type: typeof FETCH_STARSHIPS_ASYNC;
 };
 
 export type StarshipsActionTypes =
-  | StarshipsStartFetchingAction
-  | StarshipsStopFetchingAction
-  | StarshipsSaccessAction
-  | StarshipsFailureAction
-  | StarshipsFetchAsyncAction;
+  | StarshipsFetchActionStartOfRequest
+  | StarshipsFetchActionFinishOfRequest
+  | StarshipsFetchActionSuccess
+  | StarshipsFetchActionFailure
+  | StarshipsFetchActionAsync;

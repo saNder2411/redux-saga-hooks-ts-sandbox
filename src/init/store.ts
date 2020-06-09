@@ -6,8 +6,8 @@ import { composeWithDevTools } from 'redux-devtools-extension/developmentOnly';
 // Instruments
 import { rootReducer } from './root-reducer';
 import { rootSaga } from './root-saga';
-import { middleware, sagaMiddleware } from './middleware';
+import { middlewares, sagaMiddleware } from './middleware';
 
-export const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(...middleware)));
+export const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(...middlewares)));
 
 sagaMiddleware.run(rootSaga);

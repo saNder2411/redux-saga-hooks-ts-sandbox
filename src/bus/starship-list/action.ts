@@ -1,33 +1,33 @@
 // Types
 import {
   StarshipsActionTypes,
-  STARSHIPS_START_FETCHING,
-  STARSHIPS_STOP_FETCHING,
+  FETCH_STARSHIPS_START_REQUEST,
+  FETCH_STARSHIPS_FINISH_REQUEST,
   Starships,
-  STARSHIPS_SACCESS,
+  FETCH_STARSHIPS_SUCCESS,
   ErrorHttpAction,
-  STARSHIPS_FAILURE,
-  STARSHIPS_FETCH_ASYNC,
-  StarshipsSaccessAction,
-  StarshipsFailureAction,
+  FETCH_STARSHIPS_FAILURE,
+  FETCH_STARSHIPS_ASYNC,
+  StarshipsFetchActionSuccess,
+  StarshipsFetchActionFailure,
 } from './types';
 
 // Sync
 export const starshipsStartFetching = (): StarshipsActionTypes => (
-  { type: STARSHIPS_START_FETCHING }
+  { type: FETCH_STARSHIPS_START_REQUEST }
 );
 
 export const starshipsStopFetching = (): StarshipsActionTypes => (
-  { type: STARSHIPS_STOP_FETCHING }
+  { type: FETCH_STARSHIPS_FINISH_REQUEST }
 );
 
-export const starshipsSaccess = (payload: Starships): StarshipsSaccessAction => (
-  { type: STARSHIPS_SACCESS, payload }
+export const starshipsSaccess = (payload: Starships): StarshipsFetchActionSuccess => (
+  { type: FETCH_STARSHIPS_SUCCESS, payload }
 );
 
-export const starshipsFailure = (payload: ErrorHttpAction): StarshipsFailureAction => (
+export const starshipsFailure = (payload: ErrorHttpAction): StarshipsFetchActionFailure => (
   {
-    type: STARSHIPS_FAILURE,
+    type: FETCH_STARSHIPS_FAILURE,
     error: true,
     payload,
   }
@@ -35,5 +35,5 @@ export const starshipsFailure = (payload: ErrorHttpAction): StarshipsFailureActi
 
 // Async
 export const starshipsFetchAsync = (): StarshipsActionTypes => (
-  { type: STARSHIPS_FETCH_ASYNC }
+  { type: FETCH_STARSHIPS_ASYNC }
 );

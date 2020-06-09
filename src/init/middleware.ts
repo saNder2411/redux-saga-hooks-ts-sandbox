@@ -19,10 +19,10 @@ const sagaMiddleware = createSagaMiddleware();
 
 const devEnvironment = process.env.NODE_ENV === 'development';
 
-const middleware: Middleware[] = [sagaMiddleware];
+const middlewares: Middleware[] = [sagaMiddleware];
 
 if (devEnvironment) {
-  middleware.push(logger);
+  middlewares.push(logger);
 }
 
-export { middleware, sagaMiddleware };
+export { middlewares, sagaMiddleware };

@@ -18,7 +18,9 @@
     "import/extensions": [1, "ignorePackages", {
       "ts": "never",
       "tsx": "never"
-    }]
+    }],
+    "max-len": ["error", { "code": 180 }],
+    "react/jsx-props-no-spreading": 0
   },
   "settings": {
     "import/parsers": {
