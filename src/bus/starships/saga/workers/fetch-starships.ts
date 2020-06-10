@@ -15,7 +15,7 @@ import { apiService } from '../../../../services';
 
 export function* fetchStarships() {
   const options = {
-    getServiceData: apiService.getAllStaeships,
+    getServiceData: apiService.starships.getStaeships,
     starshipsStartRequest,
     starshipsFinishRequest,
     starshipsSaccess,
