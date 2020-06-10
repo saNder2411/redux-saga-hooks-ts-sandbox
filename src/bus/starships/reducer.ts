@@ -10,13 +10,13 @@ import {
   StarshipsActionTypes,
 } from './types';
 
-export type StarshipListState = {
+export type StarshipsState = {
   isLoading: boolean;
   data: null | Starships;
   error: null | ErrorHttpAction;
 };
 
-const initialState: StarshipListState = {
+const initialState: StarshipsState = {
   isLoading: false,
   data: null,
   error: null,
@@ -24,7 +24,7 @@ const initialState: StarshipListState = {
 
 const neverAction = (action: never): StarshipsActionTypes => action;
 
-export const starshipListReducer = (state = initialState, action: StarshipsActionTypes): StarshipListState => {
+export const starshipsReducer = (state = initialState, action: StarshipsActionTypes): StarshipsState => {
   switch (action.type) {
     case FETCH_STARSHIPS_START_REQUEST:
       return {

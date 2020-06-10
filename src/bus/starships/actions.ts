@@ -13,11 +13,11 @@ import {
 } from './types';
 
 // Sync
-export const starshipsStartFetching = (): StarshipsActionTypes => (
+export const starshipsStartRequest = (): StarshipsActionTypes => (
   { type: FETCH_STARSHIPS_START_REQUEST }
 );
 
-export const starshipsStopFetching = (): StarshipsActionTypes => (
+export const starshipsFinishRequest = (): StarshipsActionTypes => (
   { type: FETCH_STARSHIPS_FINISH_REQUEST }
 );
 
