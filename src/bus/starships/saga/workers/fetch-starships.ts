@@ -1,10 +1,10 @@
 // Tools
 import {
-  starshipsStartRequest, starshipsFinishRequest, starshipsSaccess, starshipsFailure,
+  startRequest, finishRequest, successRequest, failureRequest,
 } from '../../index';
 
 // Types
-import { Starships } from '../../types';
+import { Starships, ErrorHttpAction } from '../../types';
 
 // Workers
 import { doRequest } from '../../../../workers';
@@ -13,13 +13,13 @@ import { doRequest } from '../../../../workers';
 
 import { apiService } from '../../../../services';
 
-export function* fetchStarships() {
+export function* fetchStarships(): Generator {
   const options = {
-    getServiceData: apiService.starships.getStaeships,
-    starshipsStartRequest,
-    starshipsFinishRequest,
-    starshipsSaccess,
-    starshipsFailure,
+    getServiceData: apiService.starships.getStarships,
+    startRequest,
+    finishRequest,
+    successRequest,
+    failureRequest,
   };
-  yield doRequest<Starships>(options);
+  yield doRequest<Starships, ErrorHttpAction>(options);
 }

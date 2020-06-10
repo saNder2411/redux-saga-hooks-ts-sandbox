@@ -1,5 +1,5 @@
 export {
-  starshipsStartRequest, starshipsFinishRequest, starshipsSaccess, starshipsFailure, starshipsFetchAsync,
+  startRequest, finishRequest, successRequest, failureRequest, starshipsFetchAsync,
 } from './actions';
 
 export { starshipsReducer } from './reducer';

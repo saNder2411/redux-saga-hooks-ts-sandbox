@@ -8,6 +8,7 @@ export type Starships = {
 
 export type ErrorHttpAction = {
   status: number;
+  message: string;
 };
 
 // Sync

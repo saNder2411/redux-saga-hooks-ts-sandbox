@@ -13,19 +13,19 @@ import {
 } from './types';
 
 // Sync
-export const starshipsStartRequest = (): StarshipsActionTypes => (
+export const startRequest = (): StarshipsActionTypes => (
   { type: FETCH_STARSHIPS_START_REQUEST }
 );
 
-export const starshipsFinishRequest = (): StarshipsActionTypes => (
+export const finishRequest = (): StarshipsActionTypes => (
   { type: FETCH_STARSHIPS_FINISH_REQUEST }
 );
 
-export const starshipsSaccess = (payload: Starships): StarshipsFetchActionSuccess => (
+export const successRequest = (payload: Starships): StarshipsFetchActionSuccess => (
   { type: FETCH_STARSHIPS_SUCCESS, payload }
 );
 
-export const starshipsFailure = (payload: ErrorHttpAction): StarshipsFetchActionFailure => (
+export const failureRequest = (payload: ErrorHttpAction): StarshipsFetchActionFailure => (
   {
     type: FETCH_STARSHIPS_FAILURE,
     error: true,
