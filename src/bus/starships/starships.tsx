@@ -16,7 +16,7 @@ export const Starships: FC = () => {
 
   let starshipItemsJSX = null;
 
-  if (!isLoading && data?.results) {
+  if (data?.results) {
     starshipItemsJSX = data
       .results
       .map(({ name }: Starship, index: number): ReactElement => <li key={Number(index)}>{name}</li>);

@@ -10,7 +10,7 @@ type APIServiceType = {
 };
 export const apiService: APIServiceType = {
   starships: {
-    getStarships: (): Promise<Starships> => fetch(`${root}/starships`, { method: 'GET' })
+    getStarships: (): Promise<Starships> => fetch(`${root}/starships/`, { method: 'GET' })
       .then((response) => response.json())
       .then(({ results }) => ({ results })),
   },

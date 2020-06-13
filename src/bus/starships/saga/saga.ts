@@ -7,7 +7,7 @@ import { takeEvery, all, call } from 'redux-saga/effects';
 import { FETCH_STARSHIPS_ASYNC } from '../types';
 
 // Workers
-import { fetchStarships } from '../index';
+import { fetchStarships } from './workers/fetch-starships';
 
 function* watchFetchStarships(): SagaIterator {
   yield takeEvery(FETCH_STARSHIPS_ASYNC, fetchStarships);
